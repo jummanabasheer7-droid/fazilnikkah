@@ -5,17 +5,12 @@ const Opening = ({ onOpen }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowButton(true), 4500);
+    const timer = setTimeout(() => setShowButton(true), 4000);
     return () => clearTimeout(timer);
   }, []);
 
   const handleOpen = () => {
-    try {
-      const audio = new Audio('/music1.mp3');
-      audio.volume = 0.3;
-      audio.play().catch(() => {});
-    } catch (e) { /* Music is optional, ignore errors */ }
-    onOpen();
+    onOpen(); // Just calls the App.jsx handler to set isOpen and play music
   };
 
   return (
