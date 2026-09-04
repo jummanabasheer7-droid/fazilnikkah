@@ -78,7 +78,7 @@ const Opening = ({ onOpen }) => {
 <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.8 }}
+        transition={{ duration: 1.5, delay: 1.5 }}
         style={{ fontSize: '12px', letterSpacing: '4px', color: 'var(--dark-brown)', marginBottom: '20px', zIndex: 1 }}
       >
         AMS TRADERS
