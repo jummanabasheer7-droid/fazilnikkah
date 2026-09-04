@@ -17,6 +17,6 @@ export const weddingData = {
     // This opens the exact location in a new tab when clicked
     mapLink: "https://www.google.com/maps/search/?api=1&query=AZIZIA+Convention+Center+Goripalya+Padarayanapura+Bangalore"
   },
-  whatsappNumber: "8940725967",
+  whatsappNumber: "918940725967",
   galleryImages: ["", ""]
 };

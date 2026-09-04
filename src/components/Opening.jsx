@@ -5,12 +5,12 @@ const Opening = ({ onOpen }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowButton(true), 4000);
+    const timer = setTimeout(() => setShowButton(true), 4500);
     return () => clearTimeout(timer);
   }, []);
 
   const handleOpen = () => {
-    onOpen(); // Just calls the App.jsx handler to set isOpen and play music
+    onOpen();
   };
 
   return (
@@ -105,7 +105,7 @@ const Opening = ({ onOpen }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 4.5 }}
-        style={{ fontSize: '18px', letterSpacing: '2px', marginTop: '40px', color: 'var(--dark-brown)', zIndex: 1 }}
+        style={{ fontSize: '18px', letterSpacing: '2px', marginTop: '30px', color: 'var(--dark-brown)', zIndex: 1 }}
       >
         13 • 09 • 2026
       </motion.p>
@@ -117,7 +117,19 @@ const Opening = ({ onOpen }) => {
           transition={{ duration: 1, delay: 0.5 }}
           className="luxury-btn"
           onClick={handleOpen}
-          style={{ marginTop: '60px', zIndex: 1 }}
+          style={{ 
+            marginTop: '25px', /* Moved UP from 60px to 25px */
+            zIndex: 1,
+            /* Enhanced Visibility */
+            backgroundColor: 'var(--gold)',
+            color: 'var(--ivory)',
+            fontSize: '16px',
+            letterSpacing: '6px',
+            padding: '18px 45px',
+            fontWeight: '600',
+            boxShadow: '0 10px 30px rgba(212, 175, 55, 0.5)',
+            border: '2px solid var(--ivory)'
+          }}
         >
           OPEN INVITATION
         </motion.button>
